@@ -1,0 +1,28 @@
+openapi: '3.0.2'
+info:
+  title: 'Testing OpenAPI API'
+  version: 'v1'
+  contact:
+    name: 'Support'
+    email: 'support@support.com'
+  description: |
+    # Testing
+
+servers:
+  - url: 'http://local_host:3000/v1'
+    description: 'Production server'
+  - url: 'http://local_host:3000/v1'
+    description: 'Sandbox server'
+
+security:
+  - OAuth: [all]
+  - JWT: []
+paths:
+  /:
+    get:
+      summary: 'Simple API Endpoint'
+      operationId: 'testing'
+      security: []
+      responses:
+        200:
+          $ref: 'components.yaml#/components/responses/TestResponse'

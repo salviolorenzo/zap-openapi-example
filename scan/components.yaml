@@ -1,0 +1,11 @@
+components:
+  responses:
+    TestResponse:
+      description: 'Testing Description'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              errors:
+                type: string
